@@ -16,8 +16,8 @@
 
 import shelljs from "shelljs";
 import { parse } from "../espree.js";
-import path from "path";
-import { fileURLToPath } from "url";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 //------------------------------------------------------------------------------
 // Initialization
@@ -89,7 +89,7 @@ code.forEach((source, index) => {
         sourceCode = source.trim();
 
     // add an extra semicolon if there's not already one at the end - helps normalize empty lines at end of input
-    if (sourceCode[sourceCode.length - 1] !== ";") {
+    if (sourceCode.at(-1) !== ";") {
         sourceCode += ";";
     }
 

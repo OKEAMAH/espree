@@ -7,7 +7,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-import assert from "assert";
+import assert from "node:assert";
 import * as espree from "../../espree.js";
 
 
@@ -17,7 +17,7 @@ import * as espree from "../../espree.js";
 
 describe("latestEcmaVersion", () => {
     it("should return the latest supported ecmaVersion", () => {
-        assert.strictEqual(espree.latestEcmaVersion, 15);
+        assert.strictEqual(espree.latestEcmaVersion, 16);
     });
 });
 
@@ -25,7 +25,7 @@ describe("supportedEcmaVersions", () => {
     it("should return an array of all supported versions", () => {
         assert.deepStrictEqual(
             espree.supportedEcmaVersions,
-            [3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+            [3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
         );
     });
 });
